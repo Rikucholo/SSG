@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/kanda/SSG/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_fa6c0276"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/kanda/SSG/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_a4171d06"
+  }
+]
