@@ -1,5 +1,5 @@
 # gae-nuxt
-
+GAEで静的ファイルホスティング使いにくそう
 ## Build Setup
 
 ```bash
