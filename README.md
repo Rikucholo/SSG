@@ -17,3 +17,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+- github actions 自動デプロイ
+サービスアカウントキーはBASE64にエンコードする必要がある
