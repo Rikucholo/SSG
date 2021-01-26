@@ -1,0 +1,29 @@
+name: Deploy to Google App Engine
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  setup-build-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup gcloud environment
+        uses: GoogleCloudPlatform/github-actions@0.1.1
+        with:
+          service_account_email: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+          service_account_key: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
+      - name: Run tests with ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: build
+        run: |
+          npm install
+          npm run build
+      - name: GAE deploy
+        run: gcloud app deploy app.yaml --project ${{ secrets.PROJECT_ID}}
