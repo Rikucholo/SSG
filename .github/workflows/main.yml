@@ -2,10 +2,10 @@ name: Deploy to Google App Engine
 
 on:
   push:
-    paths-ignore:
-      - "pages/**"
     branches:
       - main
+    paths:
+      - "pages/**"
 
 jobs:
   setup-build-deploy:
