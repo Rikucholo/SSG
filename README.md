@@ -1,7 +1,6 @@
 # gae-nuxt
 GAEで静的ファイルホスティング使いにくそう
 ## Build Setup
-kokohaeikyouukenai
 ```bash
 # install dependencies
 $ npm install
